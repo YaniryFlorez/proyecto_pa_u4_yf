@@ -1,5 +1,9 @@
 package com.example.demo1.funcional;
 
+import java.util.Arrays;
+import java.util.List;
+
+import org.apache.el.stream.Stream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,6 +38,11 @@ public class MainInterfacesFuncionales {
 		IPersonaSupplier<Persona> supplier5 = new PersonaSupplier2Impl();
 		LOG.info("Supplier Clase: " + supplier5.getNombre());
 
+		//Java
+		LOG.info("JAVA supp");
+		//Stream<String>lista=Stream.generate(()->{ return "Yaniry 2"})
+		
+		
 		// 2.Consumer
 		LOG.info("2.Consumer");
 
@@ -55,6 +64,15 @@ public class MainInterfacesFuncionales {
 		};
 		consumer3.accept(Integer.valueOf(5), Integer.valueOf(10));
 
+		//Java
+		LOG.info("JAva Consumer");
+		List<Integer>listaNumeros =Arrays.asList(1,2,3,4,5,56,78);
+		listaNumeros.forEach(numero -> LOG.info("valor"+ numero));
+		
+		for (Integer val:listaNumeros) 
+			
+		
+		
 		// 3.Predicate
 		LOG.info("3.Predicate");
 
@@ -71,6 +89,12 @@ public class MainInterfacesFuncionales {
 		};
 		LOG.info("Predicate2: " + predicate2.evaluar(Integer.valueOf(11)));
 
+		// Java
+			LOG.info("JAVA predicate");
+			//Stream<Integer>listaFiltrada=listaNumeros.stream().filter(numero-> numero>=3);
+			//listaFiltrada.forEach(numero -> LOG.info("valor:" +numero));
+			
+			
 		// 4.Function
 		LOG.info("4.Function");
 
@@ -90,12 +114,21 @@ public class MainInterfacesFuncionales {
 		Ciudadano ciudadanoConvertido = function2.aplicar(persona);
 		LOG.info("Ciudadano convertido: " + ciudadanoConvertido);
 		
+		//JAVA
+		LOG.info("JAVA Function");
+		//Stream<String>listaCambiada= listaNumeros.stream().map(numerolista ->{
+			//Integer valorFinal= numerolista+1;
+		//	String cadena="num: "+valorFinal.toString();
+		//	return cadena;
+		//});
+		
 		// 5.UnaryOperator
 		LOG.info("5.UnaryOperator");
 		IPersonaUnaryOperator<String> unaryOperator = cadena -> {
 			String cadenaFinal = cadena.concat("-sufijo");
 			return cadenaFinal;
 		};
+		
 		LOG.info("Unary Operator: " + unaryOperator.aplicar("Yaniry"));
 	}
 }
