@@ -1,5 +1,7 @@
 package com.example.demo1.funcional;
 
-public interface IPersonaSupplier {
+@FunctionalInterface
+public interface IPersonaSupplier<T> {
 
+	public T getNombre();
 }

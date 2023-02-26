@@ -1,5 +1,7 @@
 package com.example.demo1.funcional;
 
-public interface IPersonaPredicate {
+@FunctionalInterface
+public interface IPersonaPredicate<T> {
 
+	public boolean evaluar(T arg1);
 }

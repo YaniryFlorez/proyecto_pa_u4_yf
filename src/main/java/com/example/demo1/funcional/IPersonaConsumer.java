@@ -1,5 +1,7 @@
 package com.example.demo1.funcional;
 
-public interface IPersonaConsumer {
+@FunctionalInterface
+public interface IPersonaConsumer <T, R> {
 
+	public void accept(T arg1, R agr2);
 }
