@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.example.demo1.modelo.Persona;
 
-public interface IPersonaService {
+public interface IPersonaServi {
 	public void guardar(Persona persona);
 	public void actualizar(Persona persona);
 	public void eliminar(Integer id);

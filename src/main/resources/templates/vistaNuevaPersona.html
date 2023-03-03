@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>   
  <meta charset="UTF-8">   
  <meta http-equiv="X-UA-Compatible" content="IE=edge">   
  <meta name="viewport" content="width=device-width, initial-scale=1.0">    
  <title>Document
  </title>
- </head>
- <body>
- <form th:action="@{/personas/actualizar/{id}(id=${persona.id})}" th:objetc="${persona}" th:method="PUT">
+</head>
+<body>
+ <form th:action="@{/personas/Insertar/{id}(id=${persona.id})}" th:objetc="${persona}" th:method="POST">
   <table>
      <tr>
-        <td>
+       <td>
          <label>Nombre:</label>
-        </td>
+       </td>
          
-        <td>
+       <td>
          <input Type="text" id="nombre" th:field="${persona.nombre}">
-        </td>
+       </td>
      </tr>
    
      <tr>
@@ -52,7 +52,7 @@
   
    </table>
   
-   <input type="submit" value="Actualizar">
+   <input type="submit" value="Guardar">
   </form>
  </body>
  </html>

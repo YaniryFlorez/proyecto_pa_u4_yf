@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import com.example.demo1.modelo.Persona;
 import com.example.demo1.repo.IPersonaRepo;
 @Service
-public class PersonaServiceImpl implements IPersonaService {
+public class PersonaServImpl implements IPersonaServi {
 
 	@Autowired
 	IPersonaRepo personaRepo;

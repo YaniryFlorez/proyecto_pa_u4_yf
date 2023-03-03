@@ -9,15 +9,15 @@ import javax.persistence.Table;
 @Table(name = "persona")
 public class Persona {
 	@Id
-	@Column(name = "pers_id")
+	@Column(name = "per_id")
 	private Integer id;
-	@Column(name = "pers_nombre")
+	@Column(name = "per_nombre")
 	private String nomber;
-	@Column(name = "pers_apellido")
+	@Column(name = "per_apellido")
 	private String apellido;
-	@Column(name = "pers_cedula")
+	@Column(name = "per_cedula")
 	private String cedula;
-	@Column(name = "pers_genero")
+	@Column(name = "per_genero")
 	private String genero;	
 	//GET Y SET
 	public Integer getId() {
