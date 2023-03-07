@@ -1,0 +1,33 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>   
+ <meta charset="UTF-8">   
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+ <title>Document
+ </title>
+ </head>
+ <form th:action="@{/producto/Insertar/{numero}(numero=${producto.numero})}" th:objetc="${producto}" th:method="POST">**ingresar
+
+  <table>
+    <tr>
+     <td>
+       <label>Nombre:</label>
+     </td>
+         
+      <td>
+       <input Type="text" id="nombre" th:field="${persona.nombre}">
+      </td>
+    </tr>
+    
+    <tr>
+     <td>
+       <input Type="text" id="genero" th:field="${persona.genero}">
+      </td>
+     </tr>
+  
+   </table>
+   <input type="submit" value="Actualizar">
+  </form>
+  
+</html>
